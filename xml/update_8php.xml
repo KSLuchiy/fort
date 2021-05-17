@@ -1,0 +1,264 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="update_8php" kind="file" language="PHP">
+    <compoundname>update.php</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="update_8php_1ae97941710d863131c700f069b109991e" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$id</definition>
+        <argsstring></argsstring>
+        <name>$id</name>
+        <initializer>= isset($_GET[&apos;<ref refid="update_8php_1aa35c888a93b8581a6f3f2c797e55a396" kindref="member">id</ref>&apos;]) ? $_GET[&apos;<ref refid="update_8php_1aa35c888a93b8581a6f3f2c797e55a396" kindref="member">id</ref>&apos;] : die(&apos;ERROR: missing ID.&apos;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="update.php" line="8" column="1" bodyfile="update.php" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="update_8php_1a7691c0162d89de0b6ba47edcd8ba8878" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$database</definition>
+        <argsstring></argsstring>
+        <name>$database</name>
+        <initializer>= new Database()</initializer>
+        <briefdescription>
+<para>подключение заголовочных файлов </para>
+        </briefdescription>
+        <detaileddescription>
+<para>объект БД </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="update.php" line="16" column="1" bodyfile="update.php" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="update_8php_1a1fa3127fc82f96b1436d871ef02be319" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$db</definition>
+        <argsstring></argsstring>
+        <name>$db</name>
+        <initializer>= $database-&gt;getConnection()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="update.php" line="17" column="1" bodyfile="update.php" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="update_8php_1a67d8e3a58e5644af40e14f6db1504f01" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$product</definition>
+        <argsstring></argsstring>
+        <name>$product</name>
+        <initializer>= new Product($db)</initializer>
+        <briefdescription>
+<para>подготовка объектов </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="update.php" line="20" column="1" bodyfile="update.php" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="update_8php_1a18b2a8d133fa7733bf34abcc6ca2ef5b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$category</definition>
+        <argsstring></argsstring>
+        <name>$category</name>
+        <initializer>= new Category($db)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="update.php" line="21" column="1" bodyfile="update.php" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="update_8php_1aa35c888a93b8581a6f3f2c797e55a396" prot="public" static="no" mutable="no">
+        <type>$product</type>
+        <definition>$product id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <initializer>= $id</initializer>
+        <briefdescription>
+<para>установка значения по ключу для редактирования записи </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="update.php" line="24" column="9" bodyfile="update.php" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="update_8php_1ace7d5ca2414fbd4f411985155fe2f643" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$page_title</definition>
+        <argsstring></argsstring>
+        <name>$page_title</name>
+        <initializer>= &quot;Изменение записи&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="update.php" line="28" column="1" bodyfile="update.php" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="update_8php_1a7abfa2c2565a13584ce2aba97548ae0a" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>if($_POST)</definition>
+        <argsstring>( $_POST)</argsstring>
+        <name>if</name>
+        <briefdescription>
+<para>если пользователь нажал на обновить форму </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="update.php" line="38" column="1" bodyfile="update.php" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="update_8php_1af27a9140d5f2658693e7fd107f716449" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$stmt</definition>
+        <argsstring></argsstring>
+        <name>$stmt</name>
+        <initializer>= $category-&gt;read()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="update.php" line="84" column="1" bodyfile="update.php" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="update_8php_1a00fb2cd08d32dc3b90160852855cbc9d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>while($row_category=$stmt-&gt;fetch(PDO::FETCH_ASSOC))</definition>
+        <argsstring>( $row_category=$stmt-&gt;fetch(PDO::FETCH_ASSOC))</argsstring>
+        <name>while</name>
+        <briefdescription>
+<para>список категории </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="update.php" line="90" column="5" bodyfile="update.php" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Редактирование объекта </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>$id<sp/>=<sp/>isset($_GET[</highlight><highlight class="stringliteral">&apos;id&apos;</highlight><highlight class="normal">])<sp/>?<sp/>$_GET[</highlight><highlight class="stringliteral">&apos;id&apos;</highlight><highlight class="normal">]<sp/>:<sp/>die(</highlight><highlight class="stringliteral">&apos;ERROR:<sp/>missing<sp/>ID.&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>include_once<sp/></highlight><highlight class="stringliteral">&apos;config/database.php&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>include_once<sp/></highlight><highlight class="stringliteral">&apos;objects/product.php&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>include_once<sp/></highlight><highlight class="stringliteral">&apos;objects/category.php&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="16" refid="update_8php_1a7691c0162d89de0b6ba47edcd8ba8878" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="update_8php_1a7691c0162d89de0b6ba47edcd8ba8878" kindref="member">$database</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Database();</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>$db<sp/>=<sp/><ref refid="update_8php_1a7691c0162d89de0b6ba47edcd8ba8878" kindref="member">$database</ref>-&gt;getConnection();</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="20" refid="update_8php_1a67d8e3a58e5644af40e14f6db1504f01" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="update_8php_1a67d8e3a58e5644af40e14f6db1504f01" kindref="member">$product</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Product($db);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>$category<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Category($db);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="24" refid="update_8php_1aa35c888a93b8581a6f3f2c797e55a396" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="update_8php_1a67d8e3a58e5644af40e14f6db1504f01" kindref="member">$product</ref>-&gt;id<sp/>=<sp/>$id;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal">$page_title<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Изменение<sp/>записи&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">include_once<sp/></highlight><highlight class="stringliteral">&quot;header.php&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="31"><highlight class="normal">echo<sp/></highlight><highlight class="stringliteral">&quot;&lt;div<sp/>class=&apos;right-button-margin&apos;&gt;</highlight></codeline>
+<codeline lineno="32"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;a<sp/>href=&apos;index.php&apos;<sp/>class=&apos;btn<sp/>btn-default<sp/>pull-right&apos;&gt;Назад&lt;/a&gt;</highlight></codeline>
+<codeline lineno="33"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/>&lt;/div&gt;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="35"><highlight class="normal">?&gt;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">&lt;?php<sp/></highlight></codeline>
+<codeline lineno="38" refid="update_8php_1a7abfa2c2565a13584ce2aba97548ae0a" refkind="member"><highlight class="keywordflow">if</highlight><highlight class="normal">($_POST){</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="update_8php_1a67d8e3a58e5644af40e14f6db1504f01" kindref="member">$product</ref>-&gt;name<sp/>=<sp/>$_POST[</highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="update_8php_1a67d8e3a58e5644af40e14f6db1504f01" kindref="member">$product</ref>-&gt;price<sp/>=<sp/>$_POST[</highlight><highlight class="stringliteral">&apos;price&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="update_8php_1a67d8e3a58e5644af40e14f6db1504f01" kindref="member">$product</ref>-&gt;description<sp/>=<sp/>$_POST[</highlight><highlight class="stringliteral">&apos;description&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="update_8php_1a67d8e3a58e5644af40e14f6db1504f01" kindref="member">$product</ref>-&gt;category_id<sp/>=<sp/>$_POST[</highlight><highlight class="stringliteral">&apos;category_id&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="update_8php_1a67d8e3a58e5644af40e14f6db1504f01" kindref="member">$product</ref>-&gt;update()){</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>echo<sp/></highlight><highlight class="stringliteral">&quot;&lt;div<sp/>class=&apos;alert<sp/>alert-success<sp/>alert-dismissable&apos;&gt;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>echo<sp/></highlight><highlight class="stringliteral">&quot;Запись<sp/>обновлена.&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>echo<sp/></highlight><highlight class="stringliteral">&quot;&lt;/div&gt;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>echo<sp/></highlight><highlight class="stringliteral">&quot;&lt;div<sp/>class=&apos;alert<sp/>alert-danger<sp/>alert-dismissable&apos;&gt;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>echo<sp/></highlight><highlight class="stringliteral">&quot;Невозможно<sp/>обновить<sp/>запись.&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>echo<sp/></highlight><highlight class="stringliteral">&quot;&lt;/div&gt;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">?&gt;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="62"><highlight class="normal">&lt;form<sp/>action=</highlight><highlight class="stringliteral">&quot;&lt;?php<sp/>echo<sp/>htmlspecialchars($_SERVER[&quot;</highlight><highlight class="normal">PHP_SELF</highlight><highlight class="stringliteral">&quot;]<sp/>.<sp/>&quot;</highlight><highlight class="normal">?</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">={$id}</highlight><highlight class="stringliteral">&quot;);?&gt;&quot;</highlight><highlight class="normal"><sp/>method=</highlight><highlight class="stringliteral">&quot;post&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;table<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&apos;table<sp/>table-hover<sp/>table-responsive<sp/>table-bordered&apos;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;tr&gt;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;td&gt;Наименование&lt;/td&gt;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;td&gt;&lt;input<sp/>type=</highlight><highlight class="stringliteral">&apos;text&apos;</highlight><highlight class="normal"><sp/>name=</highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal"><sp/>value=</highlight><highlight class="stringliteral">&apos;&lt;?php<sp/>echo<sp/>$product-&gt;name;<sp/>?&gt;&apos;</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&apos;form-control&apos;</highlight><highlight class="normal"><sp/>/&gt;&lt;/td&gt;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/tr&gt;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;tr&gt;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;td&gt;Цена&lt;/td&gt;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;td&gt;&lt;input<sp/>type=</highlight><highlight class="stringliteral">&apos;text&apos;</highlight><highlight class="normal"><sp/>name=</highlight><highlight class="stringliteral">&apos;price&apos;</highlight><highlight class="normal"><sp/>value=</highlight><highlight class="stringliteral">&apos;&lt;?php<sp/>echo<sp/>$product-&gt;price;<sp/>?&gt;&apos;</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&apos;form-control&apos;</highlight><highlight class="normal"><sp/>/&gt;&lt;/td&gt;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/tr&gt;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;tr&gt;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;td&gt;Описание&lt;/td&gt;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;td&gt;&lt;textarea<sp/>name=</highlight><highlight class="stringliteral">&apos;description&apos;</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&apos;form-control&apos;</highlight><highlight class="normal">&gt;&lt;?php<sp/>echo<sp/><ref refid="update_8php_1a67d8e3a58e5644af40e14f6db1504f01" kindref="member">$product</ref>-&gt;description;<sp/>?&gt;&lt;/textarea&gt;&lt;/td&gt;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/tr&gt;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;tr&gt;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;td&gt;Категория&lt;/td&gt;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;td&gt;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;?php</highlight></codeline>
+<codeline lineno="84"><highlight class="normal">$stmt<sp/>=<sp/>$category-&gt;read();</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="87"><highlight class="normal">echo<sp/></highlight><highlight class="stringliteral">&quot;&lt;select<sp/>class=&apos;form-control&apos;<sp/>name=&apos;category_id&apos;&gt;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>echo<sp/></highlight><highlight class="stringliteral">&quot;&lt;option&gt;Выбор<sp/>категории...&lt;/option&gt;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="90" refid="update_8php_1a00fb2cd08d32dc3b90160852855cbc9d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>($row_category<sp/>=<sp/>$stmt-&gt;fetch(PDO::FETCH_ASSOC)){</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$category_id=$row_category[</highlight><highlight class="stringliteral">&apos;id&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$category_name<sp/>=<sp/>$row_category[</highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="update_8php_1a67d8e3a58e5644af40e14f6db1504f01" kindref="member">$product</ref>-&gt;category_id==$category_id){</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>echo<sp/></highlight><highlight class="stringliteral">&quot;&lt;option<sp/>value=&apos;$category_id&apos;<sp/>выбран&gt;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>echo<sp/></highlight><highlight class="stringliteral">&quot;&lt;option<sp/>value=&apos;$category_id&apos;&gt;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>echo<sp/></highlight><highlight class="stringliteral">&quot;$category_name&lt;/option&gt;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal">echo<sp/></highlight><highlight class="stringliteral">&quot;&lt;/select&gt;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal">?&gt;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/td&gt;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/tr&gt;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;tr&gt;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;td&gt;&lt;/td&gt;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;td&gt;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;button<sp/>type=</highlight><highlight class="stringliteral">&quot;submit&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;btn<sp/>btn-primary&quot;</highlight><highlight class="normal">&gt;Обновить&lt;/button&gt;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/td&gt;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/tr&gt;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;/table&gt;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal">&lt;/form&gt;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/>&lt;?</highlight></codeline>
+<codeline lineno="119"><highlight class="normal">include_once<sp/></highlight><highlight class="stringliteral">&quot;footer.php&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal">?&gt;</highlight></codeline>
+    </programlisting>
+    <location file="update.php"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="footer_8php" kind="file" language="PHP">
+    <compoundname>footer.php</compoundname>
+    <briefdescription>
+<para>Заголовочный файл с подвалом для сайта </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Данный файл содержит в себе определения основных классов, используемых в программе </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"><sp/><sp/>&lt;/div&gt;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">?&gt;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">&lt;!--<sp/>jQuery<sp/>(necessary<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>Bootstrap</highlight><highlight class="stringliteral">&apos;s<sp/>JavaScript<sp/>plugins)<sp/>--&gt;</highlight></codeline>
+<codeline lineno="12"><highlight class="stringliteral">&lt;script<sp/>src=&quot;https://code.jquery.com/jquery-3.2.1.min.js&quot;&gt;&lt;/script&gt;</highlight></codeline>
+<codeline lineno="13"><highlight class="stringliteral"><sp/><sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="stringliteral">&lt;!--<sp/>Latest<sp/>compiled<sp/>and<sp/>minified<sp/>Bootstrap<sp/>JavaScript<sp/>--&gt;</highlight></codeline>
+<codeline lineno="15"><highlight class="stringliteral">&lt;script<sp/>src=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;</highlight></codeline>
+<codeline lineno="16"><highlight class="stringliteral"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="17"><highlight class="stringliteral">&lt;!--<sp/>bootbox<sp/>library<sp/>--&gt;</highlight></codeline>
+<codeline lineno="18"><highlight class="stringliteral">&lt;script<sp/>src=&quot;https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js&quot;&gt;&lt;/script&gt;</highlight></codeline>
+<codeline lineno="19"><highlight class="stringliteral"><sp/><sp/>&lt;script&gt;</highlight></codeline>
+<codeline lineno="20"><highlight class="stringliteral">//<sp/>JavaScript<sp/>for<sp/>deleting<sp/>product</highlight></codeline>
+<codeline lineno="21"><highlight class="stringliteral">$(document).on(&apos;</highlight><highlight class="normal">click</highlight><highlight class="stringliteral">&apos;,<sp/>&apos;</highlight><highlight class="normal">.</highlight><highlight class="keyword">delete</highlight><highlight class="normal">-</highlight><highlight class="keywordtype">object</highlight><highlight class="stringliteral">&apos;,<sp/>function(){</highlight></codeline>
+<codeline lineno="22"><highlight class="stringliteral"><sp/><sp/></highlight></codeline>
+<codeline lineno="23"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>var<sp/>id<sp/>=<sp/>$(this).attr(&apos;</highlight><highlight class="keyword">delete</highlight><highlight class="normal">-</highlight><highlight class="keywordtype">id</highlight><highlight class="stringliteral">&apos;);</highlight></codeline>
+<codeline lineno="24"><highlight class="stringliteral"><sp/><sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>bootbox.confirm({</highlight></codeline>
+<codeline lineno="26"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>message:<sp/>&quot;&lt;h4&gt;Вы<sp/>уверены?&lt;/h4&gt;&quot;,</highlight></codeline>
+<codeline lineno="27"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buttons:<sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>confirm:<sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>label:<sp/>&apos;</highlight><highlight class="normal">&lt;span<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;glyphicon<sp/>glyphicon-ok&quot;</highlight><highlight class="normal">&gt;&lt;/span&gt;<sp/>Да</highlight><highlight class="stringliteral">&apos;,</highlight></codeline>
+<codeline lineno="30"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>className:<sp/>&apos;</highlight><highlight class="normal">btn-danger</highlight><highlight class="stringliteral">&apos;</highlight></codeline>
+<codeline lineno="31"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="32"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cancel:<sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>label:<sp/>&apos;</highlight><highlight class="normal">&lt;span<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;glyphicon<sp/>glyphicon-remove&quot;</highlight><highlight class="normal">&gt;&lt;/span&gt;<sp/>Нет</highlight><highlight class="stringliteral">&apos;,</highlight></codeline>
+<codeline lineno="34"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>className:<sp/>&apos;</highlight><highlight class="normal">btn-primary</highlight><highlight class="stringliteral">&apos;</highlight></codeline>
+<codeline lineno="35"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="36"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="37"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>callback:<sp/>function<sp/>(result)<sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="stringliteral"><sp/><sp/></highlight></codeline>
+<codeline lineno="39"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if(result==true){</highlight></codeline>
+<codeline lineno="40"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$.post(&apos;</highlight><highlight class="keyword">delete</highlight><highlight class="normal">.php</highlight><highlight class="stringliteral">&apos;,<sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>object_id:<sp/>id</highlight></codeline>
+<codeline lineno="42"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},<sp/>function(data){</highlight></codeline>
+<codeline lineno="43"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>location.reload();</highlight></codeline>
+<codeline lineno="44"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}).fail(function()<sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>alert(&apos;</highlight><highlight class="normal">Невозможно<sp/>удалить.</highlight><highlight class="stringliteral">&apos;);</highlight></codeline>
+<codeline lineno="46"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="47"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="50"><highlight class="stringliteral"><sp/><sp/></highlight></codeline>
+<codeline lineno="51"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>return<sp/>false;</highlight></codeline>
+<codeline lineno="52"><highlight class="stringliteral">});</highlight></codeline>
+<codeline lineno="53"><highlight class="stringliteral">&lt;/script&gt;</highlight></codeline>
+<codeline lineno="54"><highlight class="stringliteral">&lt;/body&gt;</highlight></codeline>
+<codeline lineno="55"><highlight class="stringliteral">&lt;/html&gt;</highlight></codeline>
+    </programlisting>
+    <location file="footer.php"/>
+  </compounddef>
+</doxygen>

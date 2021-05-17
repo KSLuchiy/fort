@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="core_8php" kind="file" language="PHP">
+    <compoundname>core.php</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="core_8php_1a0a44e6760141442bb439b1ab1395d8ff" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$page</definition>
+        <argsstring></argsstring>
+        <name>$page</name>
+        <initializer>= isset($_GET[&apos;page&apos;]) ? $_GET[&apos;page&apos;] : 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="config/core.php" line="10" column="1" bodyfile="config/core.php" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="core_8php_1a4d609465ef7d028fa48cdcafa24c619f" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$records_per_page</definition>
+        <argsstring></argsstring>
+        <name>$records_per_page</name>
+        <initializer>= 10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="config/core.php" line="13" column="1" bodyfile="config/core.php" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="core_8php_1aaaea15f5840c2e85adbf5a247df4b19c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$from_record_num</definition>
+        <argsstring></argsstring>
+        <name>$from_record_num</name>
+        <initializer>= ($records_per_page * $page) - $records_per_page</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="config/core.php" line="16" column="1" bodyfile="config/core.php" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Заголовочный файл с описанием страниц </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Данный файл содержит в себе определения основных классов, используемых в программе </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">$page<sp/>=<sp/>isset($_GET[</highlight><highlight class="stringliteral">&apos;page&apos;</highlight><highlight class="normal">])<sp/>?<sp/>$_GET[</highlight><highlight class="stringliteral">&apos;page&apos;</highlight><highlight class="normal">]<sp/>:<sp/>1;<sp/></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>set<sp/>number<sp/>of<sp/>records<sp/>per<sp/>page</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal">$records_per_page<sp/>=<sp/>10;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/>calculate<sp/>for<sp/>the<sp/>query<sp/>LIMIT<sp/>clause</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal">$from_record_num<sp/>=<sp/>($records_per_page<sp/>*<sp/>$page)<sp/>-<sp/>$records_per_page;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">?&gt;</highlight></codeline>
+    </programlisting>
+    <location file="config/core.php"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.1" xml:lang="en-US">
+  <compound refid="create_8php" kind="file"><name>create.php</name>
+    <member refid="create_8php_1ace7d5ca2414fbd4f411985155fe2f643" kind="variable"><name>$page_title</name></member>
+    <member refid="create_8php_1a7691c0162d89de0b6ba47edcd8ba8878" kind="variable"><name>$database</name></member>
+    <member refid="create_8php_1a1fa3127fc82f96b1436d871ef02be319" kind="variable"><name>$db</name></member>
+    <member refid="create_8php_1a67d8e3a58e5644af40e14f6db1504f01" kind="variable"><name>$product</name></member>
+    <member refid="create_8php_1a18b2a8d133fa7733bf34abcc6ca2ef5b" kind="variable"><name>$category</name></member>
+    <member refid="create_8php_1a7abfa2c2565a13584ce2aba97548ae0a" kind="variable"><name>if</name></member>
+    <member refid="create_8php_1af27a9140d5f2658693e7fd107f716449" kind="variable"><name>$stmt</name></member>
+    <member refid="create_8php_1a00fb2cd08d32dc3b90160852855cbc9d" kind="variable"><name>while</name></member>
+  </compound>
+  <compound refid="delete_8php" kind="file"><name>delete.php</name>
+  </compound>
+  <compound refid="footer_8php" kind="file"><name>footer.php</name>
+  </compound>
+  <compound refid="header_8php" kind="file"><name>header.php</name>
+  </compound>
+  <compound refid="index_8php" kind="file"><name>index.php</name>
+    <member refid="index_8php_1a0a44e6760141442bb439b1ab1395d8ff" kind="variable"><name>$page</name></member>
+    <member refid="index_8php_1a4d609465ef7d028fa48cdcafa24c619f" kind="variable"><name>$records_per_page</name></member>
+    <member refid="index_8php_1aaaea15f5840c2e85adbf5a247df4b19c" kind="variable"><name>$from_record_num</name></member>
+    <member refid="index_8php_1a7691c0162d89de0b6ba47edcd8ba8878" kind="variable"><name>$database</name></member>
+    <member refid="index_8php_1a1fa3127fc82f96b1436d871ef02be319" kind="variable"><name>$db</name></member>
+    <member refid="index_8php_1a67d8e3a58e5644af40e14f6db1504f01" kind="variable"><name>$product</name></member>
+    <member refid="index_8php_1a18b2a8d133fa7733bf34abcc6ca2ef5b" kind="variable"><name>$category</name></member>
+    <member refid="index_8php_1af27a9140d5f2658693e7fd107f716449" kind="variable"><name>$stmt</name></member>
+    <member refid="index_8php_1a606c9dff2aade84f01338c3c4cd8016b" kind="variable"><name>$num</name></member>
+    <member refid="index_8php_1ace7d5ca2414fbd4f411985155fe2f643" kind="variable"><name>$page_title</name></member>
+    <member refid="index_8php_1ad6c2ffaa4362e719fb052c898f452528" kind="variable"><name>else</name></member>
+    <member refid="index_8php_1aa6d6c9fbfa20cad1ecb26166fb5bb16c" kind="variable"><name>$page_url</name></member>
+    <member refid="index_8php_1af2c641e024ee7eeec68ae26c08ca2cf2" kind="variable"><name>$total_rows</name></member>
+  </compound>
+  <compound refid="paging_8php" kind="file"><name>paging.php</name>
+    <member refid="paging_8php_1a1371327016c37abe3d7faab118692dd7" kind="variable"><name>$total_pages</name></member>
+    <member refid="paging_8php_1ac2e4b5fa63099d7c943a803ae122dd2b" kind="variable"><name>$range</name></member>
+    <member refid="paging_8php_1a78e43057009b4aca84f27c124e251820" kind="variable"><name>$initial_num</name></member>
+    <member refid="paging_8php_1a4bc96951e97839f9b9159550e9250c08" kind="variable"><name>$condition_limit_num</name></member>
+    <member refid="paging_8php_1a158ae9812bb8d30a52582703332cae6e" kind="variable"><name>if</name></member>
+  </compound>
+  <compound refid="read__template_8php" kind="file"><name>read_template.php</name>
+    <member refid="read__template_8php_1a32db4f6226c6aa2655760de191a996d4" kind="variable"><name>$search_value</name></member>
+    <member refid="read__template_8php_1a314f333d3df4eb7eddb1c58fca12bf38" kind="variable"><name>else</name></member>
+  </compound>
+  <compound refid="search_8php" kind="file"><name>search.php</name>
+    <member refid="search_8php_1a7691c0162d89de0b6ba47edcd8ba8878" kind="variable"><name>$database</name></member>
+    <member refid="search_8php_1a1fa3127fc82f96b1436d871ef02be319" kind="variable"><name>$db</name></member>
+    <member refid="search_8php_1a67d8e3a58e5644af40e14f6db1504f01" kind="variable"><name>$product</name></member>
+    <member refid="search_8php_1a18b2a8d133fa7733bf34abcc6ca2ef5b" kind="variable"><name>$category</name></member>
+    <member refid="search_8php_1a911ab56ab55c25e122ce2038df02ae82" kind="variable"><name>$search_term</name></member>
+    <member refid="search_8php_1ace7d5ca2414fbd4f411985155fe2f643" kind="variable"><name>$page_title</name></member>
+    <member refid="search_8php_1af27a9140d5f2658693e7fd107f716449" kind="variable"><name>$stmt</name></member>
+    <member refid="search_8php_1aa6d6c9fbfa20cad1ecb26166fb5bb16c" kind="variable"><name>$page_url</name></member>
+    <member refid="search_8php_1af2c641e024ee7eeec68ae26c08ca2cf2" kind="variable"><name>$total_rows</name></member>
+  </compound>
+  <compound refid="update_8php" kind="file"><name>update.php</name>
+    <member refid="update_8php_1ae97941710d863131c700f069b109991e" kind="variable"><name>$id</name></member>
+    <member refid="update_8php_1a7691c0162d89de0b6ba47edcd8ba8878" kind="variable"><name>$database</name></member>
+    <member refid="update_8php_1a1fa3127fc82f96b1436d871ef02be319" kind="variable"><name>$db</name></member>
+    <member refid="update_8php_1a67d8e3a58e5644af40e14f6db1504f01" kind="variable"><name>$product</name></member>
+    <member refid="update_8php_1a18b2a8d133fa7733bf34abcc6ca2ef5b" kind="variable"><name>$category</name></member>
+    <member refid="update_8php_1aa35c888a93b8581a6f3f2c797e55a396" kind="variable"><name>id</name></member>
+    <member refid="update_8php_1ace7d5ca2414fbd4f411985155fe2f643" kind="variable"><name>$page_title</name></member>
+    <member refid="update_8php_1a7abfa2c2565a13584ce2aba97548ae0a" kind="variable"><name>if</name></member>
+    <member refid="update_8php_1af27a9140d5f2658693e7fd107f716449" kind="variable"><name>$stmt</name></member>
+    <member refid="update_8php_1a00fb2cd08d32dc3b90160852855cbc9d" kind="variable"><name>while</name></member>
+  </compound>
+</doxygenindex>

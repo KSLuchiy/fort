@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_database" kind="class" language="PHP" prot="public">
+    <compoundname>Database</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_database_1a711797613cb863ca0756df789c396bf2" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$host</definition>
+        <argsstring></argsstring>
+        <name>$host</name>
+        <initializer>= &quot;localhost&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="config/database.php" line="16" column="13" bodyfile="config/database.php" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_database_1a26dcb19f4431598ddd5f58147f131bee" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$db_name</definition>
+        <argsstring></argsstring>
+        <name>$db_name</name>
+        <initializer>= &quot;php_db&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="config/database.php" line="17" column="13" bodyfile="config/database.php" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_database_1a0eb82aa5f81cf845de4b36cd653c42cf" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$username</definition>
+        <argsstring></argsstring>
+        <name>$username</name>
+        <initializer>= &quot;root&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="config/database.php" line="18" column="13" bodyfile="config/database.php" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_database_1a607686ef9f99ea7c42f4f3dd3dbb2b0d" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$password</definition>
+        <argsstring></argsstring>
+        <name>$password</name>
+        <initializer>= &quot;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="config/database.php" line="19" column="13" bodyfile="config/database.php" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_database_1aa8a5a87b9c1a6a0819b88447cbe41877" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$conn</definition>
+        <argsstring></argsstring>
+        <name>$conn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="config/database.php" line="20" column="12" bodyfile="config/database.php" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_database_1ab7a0a080d0e721c656eef11cd641638b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getConnection</definition>
+        <argsstring>()</argsstring>
+        <name>getConnection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="config/database.php" line="23" column="21" bodyfile="config/database.php" bodystart="23" bodyend="34"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="config/database.php" line="7" column="1" bodyfile="config/database.php" bodystart="7" bodyend="35"/>
+    <listofallmembers>
+      <member refid="class_database_1aa8a5a87b9c1a6a0819b88447cbe41877" prot="public" virt="non-virtual"><scope>Database</scope><name>$conn</name></member>
+      <member refid="class_database_1a26dcb19f4431598ddd5f58147f131bee" prot="private" virt="non-virtual"><scope>Database</scope><name>$db_name</name></member>
+      <member refid="class_database_1a711797613cb863ca0756df789c396bf2" prot="private" virt="non-virtual"><scope>Database</scope><name>$host</name></member>
+      <member refid="class_database_1a607686ef9f99ea7c42f4f3dd3dbb2b0d" prot="private" virt="non-virtual"><scope>Database</scope><name>$password</name></member>
+      <member refid="class_database_1a0eb82aa5f81cf845de4b36cd653c42cf" prot="private" virt="non-virtual"><scope>Database</scope><name>$username</name></member>
+      <member refid="class_database_1ab7a0a080d0e721c656eef11cd641638b" prot="public" virt="non-virtual"><scope>Database</scope><name>getConnection</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

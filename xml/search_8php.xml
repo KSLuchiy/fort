@@ -1,0 +1,178 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="search_8php" kind="file" language="PHP">
+    <compoundname>search.php</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="search_8php_1a7691c0162d89de0b6ba47edcd8ba8878" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$database</definition>
+        <argsstring></argsstring>
+        <name>$database</name>
+        <initializer>= new Database()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="search.php" line="14" column="1" bodyfile="search.php" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="search_8php_1a1fa3127fc82f96b1436d871ef02be319" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$db</definition>
+        <argsstring></argsstring>
+        <name>$db</name>
+        <initializer>= $database-&gt;getConnection()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="search.php" line="15" column="1" bodyfile="search.php" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="search_8php_1a67d8e3a58e5644af40e14f6db1504f01" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$product</definition>
+        <argsstring></argsstring>
+        <name>$product</name>
+        <initializer>= new Product($db)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="search.php" line="17" column="1" bodyfile="search.php" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="search_8php_1a18b2a8d133fa7733bf34abcc6ca2ef5b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$category</definition>
+        <argsstring></argsstring>
+        <name>$category</name>
+        <initializer>= new Category($db)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="search.php" line="18" column="1" bodyfile="search.php" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="search_8php_1a911ab56ab55c25e122ce2038df02ae82" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$search_term</definition>
+        <argsstring></argsstring>
+        <name>$search_term</name>
+        <initializer>=isset($_GET[&apos;s&apos;]) ? $_GET[&apos;s&apos;] : &apos;&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="search.php" line="21" column="1" bodyfile="search.php" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="search_8php_1ace7d5ca2414fbd4f411985155fe2f643" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$page_title</definition>
+        <argsstring></argsstring>
+        <name>$page_title</name>
+        <initializer>= &quot;Вы искали \&quot;{$search_term}\&quot;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="search.php" line="23" column="1" bodyfile="search.php" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="search_8php_1af27a9140d5f2658693e7fd107f716449" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$stmt</definition>
+        <argsstring></argsstring>
+        <name>$stmt</name>
+        <initializer>= $product-&gt;search($search_term, $from_record_num, $records_per_page)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="search.php" line="27" column="1" bodyfile="search.php" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="search_8php_1aa6d6c9fbfa20cad1ecb26166fb5bb16c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$page_url</definition>
+        <argsstring></argsstring>
+        <name>$page_url</name>
+        <initializer>=&quot;search.php?s={$search_term}&amp;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="search.php" line="30" column="1" bodyfile="search.php" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="search_8php_1af2c641e024ee7eeec68ae26c08ca2cf2" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$total_rows</definition>
+        <argsstring></argsstring>
+        <name>$total_rows</name>
+        <initializer>=$product-&gt;countAll_BySearch($search_term)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="search.php" line="33" column="1" bodyfile="search.php" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Поиск информации об объекте </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">include_once<sp/></highlight><highlight class="stringliteral">&apos;config/core.php&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>заголовочные<sp/>файлы</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal">include_once<sp/></highlight><highlight class="stringliteral">&apos;config/database.php&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">include_once<sp/></highlight><highlight class="stringliteral">&apos;objects/product.php&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">include_once<sp/></highlight><highlight class="stringliteral">&apos;objects/category.php&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal">$database<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Database();</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">$db<sp/>=<sp/>$database-&gt;getConnection();</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="17"><highlight class="normal">$product<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Product($db);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">$category<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Category($db);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal">$search_term=isset($_GET[</highlight><highlight class="charliteral">&apos;s&apos;</highlight><highlight class="normal">])<sp/>?<sp/>$_GET[</highlight><highlight class="charliteral">&apos;s&apos;</highlight><highlight class="normal">]<sp/>:<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="23"><highlight class="normal">$page_title<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Вы<sp/>искали<sp/>\&quot;{$search_term}\&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">include_once<sp/></highlight><highlight class="stringliteral">&quot;header.php&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">//<sp/>запрос<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal">$stmt<sp/>=<sp/>$product-&gt;search($search_term,<sp/>$from_record_num,<sp/>$records_per_page);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">//<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal">$page_url=</highlight><highlight class="stringliteral">&quot;search.php?s={$search_term}&amp;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">//<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal">$total_rows=$product-&gt;countAll_BySearch($search_term);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="comment">//<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal">include_once<sp/></highlight><highlight class="stringliteral">&quot;read_template.php&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">//<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal">include_once<sp/></highlight><highlight class="stringliteral">&quot;footer.php&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">?&gt;</highlight></codeline>
+    </programlisting>
+    <location file="search.php"/>
+  </compounddef>
+</doxygen>

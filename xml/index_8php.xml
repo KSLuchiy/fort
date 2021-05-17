@@ -1,0 +1,318 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="index_8php" kind="file" language="PHP">
+    <compoundname>index.php</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="index_8php_1a0a44e6760141442bb439b1ab1395d8ff" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$page</definition>
+        <argsstring></argsstring>
+        <name>$page</name>
+        <initializer>= isset($_GET[&apos;page&apos;]) ? $_GET[&apos;page&apos;] : 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>Семен </para>
+</simplesect>
+<simplesect kind="version"><para>1.0 </para>
+</simplesect>
+<simplesect kind="date"><para>Май 2021 года </para>
+</simplesect>
+<simplesect kind="warning"><para>Данный проект создан в учебных целях </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="index.php" line="15" column="1" bodyfile="index.php" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="index_8php_1a4d609465ef7d028fa48cdcafa24c619f" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$records_per_page</definition>
+        <argsstring></argsstring>
+        <name>$records_per_page</name>
+        <initializer>= 10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="index.php" line="18" column="1" bodyfile="index.php" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="index_8php_1aaaea15f5840c2e85adbf5a247df4b19c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$from_record_num</definition>
+        <argsstring></argsstring>
+        <name>$from_record_num</name>
+        <initializer>= ($records_per_page * $page) - $records_per_page</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="index.php" line="21" column="1" bodyfile="index.php" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="index_8php_1a7691c0162d89de0b6ba47edcd8ba8878" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$database</definition>
+        <argsstring></argsstring>
+        <name>$database</name>
+        <initializer>= new Database()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>инициализация объекта базы данных </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="index.php" line="34" column="1" bodyfile="index.php" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="index_8php_1a1fa3127fc82f96b1436d871ef02be319" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$db</definition>
+        <argsstring></argsstring>
+        <name>$db</name>
+        <initializer>= $database-&gt;getConnection()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="index.php" line="35" column="1" bodyfile="index.php" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="index_8php_1a67d8e3a58e5644af40e14f6db1504f01" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$product</definition>
+        <argsstring></argsstring>
+        <name>$product</name>
+        <initializer>= new Product($db)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>инициализация объектов сущности товара и категории </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="index.php" line="40" column="1" bodyfile="index.php" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="index_8php_1a18b2a8d133fa7733bf34abcc6ca2ef5b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$category</definition>
+        <argsstring></argsstring>
+        <name>$category</name>
+        <initializer>= new Category($db)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="index.php" line="41" column="1" bodyfile="index.php" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="index_8php_1af27a9140d5f2658693e7fd107f716449" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$stmt</definition>
+        <argsstring></argsstring>
+        <name>$stmt</name>
+        <initializer>= $product-&gt;readAll($from_record_num, $records_per_page)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="index.php" line="44" column="1" bodyfile="index.php" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="index_8php_1a606c9dff2aade84f01338c3c4cd8016b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$num</definition>
+        <argsstring></argsstring>
+        <name>$num</name>
+        <initializer>= $stmt-&gt;rowCount()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="index.php" line="45" column="1" bodyfile="index.php" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="index_8php_1ace7d5ca2414fbd4f411985155fe2f643" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$page_title</definition>
+        <argsstring></argsstring>
+        <name>$page_title</name>
+        <initializer>= &quot;Общая информация &quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="index.php" line="50" column="1" bodyfile="index.php" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="index_8php_1ad6c2ffaa4362e719fb052c898f452528" prot="public" static="no" mutable="no">
+        <type><ref refid="update_8php_1a7abfa2c2565a13584ce2aba97548ae0a" kindref="member">if</ref>($num &gt;0)</type>
+        <definition>if ( $num &gt;0) else</definition>
+        <argsstring></argsstring>
+        <name>else</name>
+        <initializer>{
+    echo &quot;&lt;div class=&apos;alert alert-info&apos;&gt;Записей не найдено.&lt;/div&gt;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="index.php" line="108" column="1" bodyfile="index.php" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="index_8php_1aa6d6c9fbfa20cad1ecb26166fb5bb16c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$page_url</definition>
+        <argsstring></argsstring>
+        <name>$page_url</name>
+        <initializer>= &quot;index.php?&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="index.php" line="113" column="1" bodyfile="index.php" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="index_8php_1af2c641e024ee7eeec68ae26c08ca2cf2" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$total_rows</definition>
+        <argsstring></argsstring>
+        <name>$total_rows</name>
+        <initializer>= $product-&gt;countAll()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="index.php" line="116" column="1" bodyfile="index.php" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Главная страница </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="15" refid="index_8php_1a0a44e6760141442bb439b1ab1395d8ff" refkind="member"><highlight class="normal"><ref refid="index_8php_1a0a44e6760141442bb439b1ab1395d8ff" kindref="member">$page</ref><sp/>=<sp/>isset($_GET[</highlight><highlight class="stringliteral">&apos;page&apos;</highlight><highlight class="normal">])<sp/>?<sp/>$_GET[</highlight><highlight class="stringliteral">&apos;page&apos;</highlight><highlight class="normal">]<sp/>:<sp/>1;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//<sp/>количество<sp/>значений<sp/>на<sp/>странице</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal">$records_per_page<sp/>=<sp/>10;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal">$from_record_num<sp/>=<sp/>($records_per_page<sp/>*<sp/><ref refid="index_8php_1a0a44e6760141442bb439b1ab1395d8ff" kindref="member">$page</ref>)<sp/>-<sp/>$records_per_page;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">//<sp/>core.php<sp/>holds<sp/>pagination<sp/>variables</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal">include_once<sp/></highlight><highlight class="stringliteral">&apos;config/core.php&apos;</highlight><highlight class="normal">;<sp/><sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">//<sp/>подключение<sp/>заголовочных<sp/>файлов</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal">include_once<sp/></highlight><highlight class="stringliteral">&apos;config/database.php&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">include_once<sp/></highlight><highlight class="stringliteral">&apos;objects/product.php&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">include_once<sp/></highlight><highlight class="stringliteral">&apos;objects/category.php&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="34" refid="index_8php_1a7691c0162d89de0b6ba47edcd8ba8878" refkind="member"><highlight class="normal"><ref refid="index_8php_1a7691c0162d89de0b6ba47edcd8ba8878" kindref="member">$database</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Database();</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">$db<sp/>=<sp/><ref refid="index_8php_1a7691c0162d89de0b6ba47edcd8ba8878" kindref="member">$database</ref>-&gt;getConnection();</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="40" refid="index_8php_1a67d8e3a58e5644af40e14f6db1504f01" refkind="member"><highlight class="normal"><ref refid="index_8php_1a67d8e3a58e5644af40e14f6db1504f01" kindref="member">$product</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Product($db);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">$category<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Category($db);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="comment">//<sp/>запрос</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal">$stmt<sp/>=<sp/><ref refid="index_8php_1a67d8e3a58e5644af40e14f6db1504f01" kindref="member">$product</ref>-&gt;readAll($from_record_num,<sp/>$records_per_page);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">$num<sp/>=<sp/>$stmt-&gt;rowCount();</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="comment">//<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal">$page_title<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Общая<sp/>информация<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">include_once<sp/></highlight><highlight class="stringliteral">&quot;header.php&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="comment">//<sp/>кнопка<sp/>добавления<sp/>записи</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal">echo<sp/></highlight><highlight class="stringliteral">&quot;&lt;div<sp/>class=&apos;right-button-margin&apos;&gt;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>echo<sp/></highlight><highlight class="stringliteral">&quot;&lt;a<sp/>href=&apos;create.php&apos;<sp/>class=&apos;btn<sp/>btn-primary<sp/>pull-right&apos;&gt;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>echo<sp/></highlight><highlight class="stringliteral">&quot;&lt;span<sp/>class=&apos;glyphicon<sp/>glyphicon-plus&apos;&gt;&lt;/span&gt;<sp/>Добавить<sp/>запись&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>echo<sp/></highlight><highlight class="stringliteral">&quot;&lt;/a&gt;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">echo<sp/></highlight><highlight class="stringliteral">&quot;&lt;/div&gt;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="comment">//<sp/>отображение<sp/>результатов</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">($num&gt;0){</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>echo<sp/></highlight><highlight class="stringliteral">&quot;&lt;table<sp/>class=&apos;table<sp/>table-hover<sp/>table-responsive<sp/>table-bordered&apos;&gt;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>echo<sp/></highlight><highlight class="stringliteral">&quot;&lt;tr&gt;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>echo<sp/></highlight><highlight class="stringliteral">&quot;&lt;th&gt;Наименование&lt;/th&gt;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>echo<sp/></highlight><highlight class="stringliteral">&quot;&lt;th&gt;Цена&lt;/th&gt;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>echo<sp/></highlight><highlight class="stringliteral">&quot;&lt;th&gt;Описание&lt;/th&gt;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>echo<sp/></highlight><highlight class="stringliteral">&quot;&lt;th&gt;Категория&lt;/th&gt;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>echo<sp/></highlight><highlight class="stringliteral">&quot;&lt;th&gt;Действия&lt;/th&gt;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>echo<sp/></highlight><highlight class="stringliteral">&quot;&lt;/tr&gt;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>($row<sp/>=<sp/>$stmt-&gt;fetch(PDO::FETCH_ASSOC)){</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>extract($row);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>echo<sp/></highlight><highlight class="stringliteral">&quot;&lt;tr&gt;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>echo<sp/></highlight><highlight class="stringliteral">&quot;&lt;td&gt;{$name}&lt;/td&gt;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>echo<sp/></highlight><highlight class="stringliteral">&quot;&lt;td&gt;{$price}&lt;/td&gt;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>echo<sp/></highlight><highlight class="stringliteral">&quot;&lt;td&gt;{$description}&lt;/td&gt;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>echo<sp/></highlight><highlight class="stringliteral">&quot;&lt;td&gt;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$category-&gt;id<sp/>=<sp/>$category_id;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$category-&gt;readName();</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>echo<sp/>$category-&gt;name;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>echo<sp/></highlight><highlight class="stringliteral">&quot;&lt;/td&gt;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>echo<sp/></highlight><highlight class="stringliteral">&quot;&lt;td&gt;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>echo<sp/><sp/></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="stringliteral">&quot;&lt;a<sp/>href=&apos;update.php?id={$id}&apos;<sp/>class=&apos;btn<sp/>btn-info<sp/>left-margin&apos;&gt;</highlight></codeline>
+<codeline lineno="89"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&lt;span<sp/>class=&apos;glyphicon<sp/>glyphicon-edit&apos;&gt;&lt;/span&gt;<sp/>Изменить</highlight></codeline>
+<codeline lineno="90"><highlight class="stringliteral">&lt;/a&gt;</highlight></codeline>
+<codeline lineno="91"><highlight class="stringliteral"><sp/><sp/></highlight></codeline>
+<codeline lineno="92"><highlight class="stringliteral">&lt;a<sp/>delete-id=&apos;{$id}&apos;<sp/>class=&apos;btn<sp/>btn-danger<sp/>delete-object&apos;&gt;</highlight></codeline>
+<codeline lineno="93"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&lt;span<sp/>class=&apos;glyphicon<sp/>glyphicon-remove&apos;&gt;&lt;/span&gt;<sp/>Удалить</highlight></codeline>
+<codeline lineno="94"><highlight class="stringliteral">&lt;/a&gt;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>echo<sp/></highlight><highlight class="stringliteral">&quot;&lt;/td&gt;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>echo<sp/></highlight><highlight class="stringliteral">&quot;&lt;/tr&gt;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>echo<sp/></highlight><highlight class="stringliteral">&quot;&lt;/table&gt;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>страница<sp/>пагинации</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/>include_once<sp/></highlight><highlight class="stringliteral">&apos;paging.php&apos;</highlight><highlight class="normal">;<sp/></highlight></codeline>
+<codeline lineno="105"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="comment">//<sp/>информация<sp/>об<sp/>отсутствии<sp/>записей</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>echo<sp/></highlight><highlight class="stringliteral">&quot;&lt;div<sp/>class=&apos;alert<sp/>alert-info&apos;&gt;Записей<sp/>не<sp/>найдено.&lt;/div&gt;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="comment">//<sp/>the<sp/>page<sp/>where<sp/>this<sp/>paging<sp/>is<sp/>used</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal">$page_url<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;index.php?&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="comment">//<sp/>подсчет<sp/>всех<sp/>записей<sp/>в<sp/>базе</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal">$total_rows<sp/>=<sp/><ref refid="index_8php_1a67d8e3a58e5644af40e14f6db1504f01" kindref="member">$product</ref>-&gt;countAll();</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="comment">//<sp/>read_template.php<sp/>controls<sp/>how<sp/>the<sp/>product<sp/>list<sp/>will<sp/>be<sp/>rendered</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal">include_once<sp/></highlight><highlight class="stringliteral">&quot;read_template.php&quot;</highlight><highlight class="normal">;<sp/><sp/></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="comment">//<sp/>подвал</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal">include_once<sp/></highlight><highlight class="stringliteral">&quot;footer.php&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal">?&gt;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="index.php"/>
+  </compounddef>
+</doxygen>

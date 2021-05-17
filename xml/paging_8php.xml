@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="paging_8php" kind="file" language="PHP">
+    <compoundname>paging.php</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="paging_8php_1a1371327016c37abe3d7faab118692dd7" prot="public" static="no" mutable="no">
+        <type><ref refid="update_8php_1a7abfa2c2565a13584ce2aba97548ae0a" kindref="member">if</ref>($page &gt;1)</type>
+        <definition>if ( $page &gt;1) $total_pages</definition>
+        <argsstring></argsstring>
+        <name>$total_pages</name>
+        <initializer>= ceil($total_rows / $records_per_page)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="paging.php" line="12" column="1" bodyfile="paging.php" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="paging_8php_1ac2e4b5fa63099d7c943a803ae122dd2b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$range</definition>
+        <argsstring></argsstring>
+        <name>$range</name>
+        <initializer>= 2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="paging.php" line="15" column="1" bodyfile="paging.php" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="paging_8php_1a78e43057009b4aca84f27c124e251820" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$initial_num</definition>
+        <argsstring></argsstring>
+        <name>$initial_num</name>
+        <initializer>= $page - $range</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="paging.php" line="18" column="1" bodyfile="paging.php" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="paging_8php_1a4bc96951e97839f9b9159550e9250c08" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$condition_limit_num</definition>
+        <argsstring></argsstring>
+        <name>$condition_limit_num</name>
+        <initializer>= ($page + $range)  + 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="paging.php" line="19" column="1" bodyfile="paging.php" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="paging_8php_1a158ae9812bb8d30a52582703332cae6e" prot="public" static="no" mutable="no">
+        <type>for($x=$initial_num; $x&lt; $condition_limit_num; $x++)</type>
+        <definition>for ( $x=$initial_num;$x&lt; $condition_limit_num;$x++) if($page&lt; $total_pages)</definition>
+        <argsstring>( $page&lt; $total_pages)</argsstring>
+        <name>if</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="paging.php" line="39" column="1" bodyfile="paging.php" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="2"><highlight class="normal">echo<sp/></highlight><highlight class="stringliteral">&quot;&lt;ul<sp/>class=\&quot;pagination\&quot;&gt;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>button<sp/>for<sp/>first<sp/>page</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="index_8php_1a0a44e6760141442bb439b1ab1395d8ff" kindref="member">$page</ref>&gt;1){</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>echo<sp/></highlight><highlight class="stringliteral">&quot;&lt;li&gt;&lt;a<sp/>href=&apos;{$page_url}&apos;<sp/>title=&apos;Перейти<sp/>на<sp/>первую<sp/>страницу.&apos;&gt;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>echo<sp/></highlight><highlight class="stringliteral">&quot;Первая<sp/>страница&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>echo<sp/></highlight><highlight class="stringliteral">&quot;&lt;/a&gt;&lt;/li&gt;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>count<sp/>all<sp/>products<sp/>in<sp/>the<sp/>database<sp/>to<sp/>calculate<sp/>total<sp/>pages</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal">$total_pages<sp/>=<sp/>ceil($total_rows<sp/>/<sp/>$records_per_page);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/>range<sp/>of<sp/>links<sp/>to<sp/>show</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal">$range<sp/>=<sp/>2;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//<sp/>display<sp/>links<sp/>to<sp/>&apos;range<sp/>of<sp/>pages&apos;<sp/>around<sp/>&apos;current<sp/>page&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal">$initial_num<sp/>=<sp/><ref refid="index_8php_1a0a44e6760141442bb439b1ab1395d8ff" kindref="member">$page</ref><sp/>-<sp/>$range;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">$condition_limit_num<sp/>=<sp/>(<ref refid="index_8php_1a0a44e6760141442bb439b1ab1395d8ff" kindref="member">$page</ref><sp/>+<sp/>$range)<sp/><sp/>+<sp/>1;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>($x=$initial_num;<sp/>$x&lt;$condition_limit_num;<sp/>$x++)<sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>be<sp/>sure<sp/>&apos;$x<sp/>is<sp/>greater<sp/>than<sp/>0&apos;<sp/>AND<sp/>&apos;less<sp/>than<sp/>or<sp/>equal<sp/>to<sp/>the<sp/>$total_pages&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(($x<sp/>&gt;<sp/>0)<sp/>&amp;&amp;<sp/>($x<sp/>&lt;=<sp/>$total_pages))<sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>current<sp/>page</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($x<sp/>==<sp/><ref refid="index_8php_1a0a44e6760141442bb439b1ab1395d8ff" kindref="member">$page</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>echo<sp/></highlight><highlight class="stringliteral">&quot;&lt;li<sp/>class=&apos;active&apos;&gt;&lt;a<sp/>href=\&quot;#\&quot;&gt;$x<sp/>&lt;span<sp/>class=\&quot;sr-only\&quot;&gt;(current)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>not<sp/>current<sp/>page</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>echo<sp/></highlight><highlight class="stringliteral">&quot;&lt;li&gt;&lt;a<sp/>href=&apos;{$page_url}page=$x&apos;&gt;$x&lt;/a&gt;&lt;/li&gt;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">//<sp/>button<sp/>for<sp/>last<sp/>page</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="index_8php_1a0a44e6760141442bb439b1ab1395d8ff" kindref="member">$page</ref>&lt;$total_pages){</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>echo<sp/></highlight><highlight class="stringliteral">&quot;&lt;li&gt;&lt;a<sp/>href=&apos;&quot;</highlight><highlight class="normal"><sp/>.$page_url<sp/>.<sp/></highlight><highlight class="stringliteral">&quot;page={$total_pages}&apos;<sp/>title=&apos;Последняя<sp/>страница<sp/>{$total_pages}.&apos;&gt;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>echo<sp/></highlight><highlight class="stringliteral">&quot;Последняя<sp/>страница&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>echo<sp/></highlight><highlight class="stringliteral">&quot;&lt;/a&gt;&lt;/li&gt;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="45"><highlight class="normal">echo<sp/></highlight><highlight class="stringliteral">&quot;&lt;/ul&gt;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">?&gt;</highlight></codeline>
+    </programlisting>
+    <location file="paging.php"/>
+  </compounddef>
+</doxygen>
