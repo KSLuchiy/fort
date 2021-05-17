@@ -1,0 +1,39 @@
+\hypertarget{create_8php}{}\doxysection{create.\+php File Reference}
+\label{create_8php}\index{create.php@{create.php}}
+
+
+Создание объекта (добавление) в базу  
+
+
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{create_8php_ace7d5ca2414fbd4f411985155fe2f643}\label{create_8php_ace7d5ca2414fbd4f411985155fe2f643}} 
+{\bfseries \$page\+\_\+title} = \char`\"{}Добавление записи\char`\"{}
+\item 
+\mbox{\Hypertarget{create_8php_a7691c0162d89de0b6ba47edcd8ba8878}\label{create_8php_a7691c0162d89de0b6ba47edcd8ba8878}} 
+{\bfseries \$database} = new Database()
+\item 
+\mbox{\Hypertarget{create_8php_a1fa3127fc82f96b1436d871ef02be319}\label{create_8php_a1fa3127fc82f96b1436d871ef02be319}} 
+{\bfseries \$db} = \$database-\/$>$get\+Connection()
+\item 
+\mbox{\Hypertarget{create_8php_a67d8e3a58e5644af40e14f6db1504f01}\label{create_8php_a67d8e3a58e5644af40e14f6db1504f01}} 
+{\bfseries \$product} = new Product(\$db)
+\item 
+\mbox{\Hypertarget{create_8php_a18b2a8d133fa7733bf34abcc6ca2ef5b}\label{create_8php_a18b2a8d133fa7733bf34abcc6ca2ef5b}} 
+{\bfseries \$category} = new Category(\$db)
+\item 
+\mbox{\Hypertarget{create_8php_a7abfa2c2565a13584ce2aba97548ae0a}\label{create_8php_a7abfa2c2565a13584ce2aba97548ae0a}} 
+{\bfseries if} ( \$\+\_\+\+POST)
+\item 
+\mbox{\Hypertarget{create_8php_af27a9140d5f2658693e7fd107f716449}\label{create_8php_af27a9140d5f2658693e7fd107f716449}} 
+{\bfseries \$stmt} = \$category-\/$>$read()
+\item 
+\mbox{\Hypertarget{create_8php_a00fb2cd08d32dc3b90160852855cbc9d}\label{create_8php_a00fb2cd08d32dc3b90160852855cbc9d}} 
+{\bfseries while} ( \$row\+\_\+category=\$stmt-\/$>$fetch(PDO\+::\+FETCH\+\_\+\+ASSOC))
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Создание объекта (добавление) в базу 
+

@@ -1,0 +1,45 @@
+.TH "create.php" 3 "Sat May 15 2021" "My Project" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+create.php \- Создание объекта (добавление) в базу  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fB$page_title\fP = 'Добавление записи'"
+.br
+.ti -1c
+.RI "\fB$database\fP = new Database()"
+.br
+.ti -1c
+.RI "\fB$db\fP = $database\->getConnection()"
+.br
+.ti -1c
+.RI "\fB$product\fP = new Product($db)"
+.br
+.ti -1c
+.RI "\fB$category\fP = new Category($db)"
+.br
+.ti -1c
+.RI "\fBif\fP ( $_POST)"
+.br
+.ti -1c
+.RI "\fB$stmt\fP = $category\->read()"
+.br
+.ti -1c
+.RI "\fBwhile\fP ( $row_category=$stmt\->fetch(PDO::FETCH_ASSOC))"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Создание объекта (добавление) в базу 
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for My Project from the source code\&.

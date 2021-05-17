@@ -1,0 +1,62 @@
+.TH "update.php" 3 "Sat May 15 2021" "My Project" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+update.php \- Редактирование объекта  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fB$id\fP = isset($_GET['\fBid\fP']) ? $_GET['\fBid\fP'] : die('ERROR: missing ID\&.')"
+.br
+.ti -1c
+.RI "\fB$database\fP = new Database()"
+.br
+.RI "подключение заголовочных файлов "
+.ti -1c
+.RI "\fB$db\fP = $database\->getConnection()"
+.br
+.ti -1c
+.RI "\fB$product\fP = new Product($db)"
+.br
+.RI "подготовка объектов "
+.ti -1c
+.RI "\fB$category\fP = new Category($db)"
+.br
+.ti -1c
+.RI "$product \fBid\fP = $id"
+.br
+.RI "установка значения по ключу для редактирования записи "
+.ti -1c
+.RI "\fB$page_title\fP = 'Изменение записи'"
+.br
+.ti -1c
+.RI "\fBif\fP ( $_POST)"
+.br
+.RI "если пользователь нажал на обновить форму "
+.ti -1c
+.RI "\fB$stmt\fP = $category\->read()"
+.br
+.ti -1c
+.RI "\fBwhile\fP ( $row_category=$stmt\->fetch(PDO::FETCH_ASSOC))"
+.br
+.RI "список категории "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Редактирование объекта 
+
+
+.SH "Variable Documentation"
+.PP 
+.SS "$database = new Database()"
+
+.PP
+подключение заголовочных файлов объект БД 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for My Project from the source code\&.

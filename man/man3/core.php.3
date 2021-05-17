@@ -1,0 +1,30 @@
+.TH "config/core.php" 3 "Sat May 15 2021" "My Project" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+config/core.php \- Заголовочный файл с описанием страниц  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fB$page\fP = isset($_GET['page']) ? $_GET['page'] : 1"
+.br
+.ti -1c
+.RI "\fB$records_per_page\fP = 10"
+.br
+.ti -1c
+.RI "\fB$from_record_num\fP = ($records_per_page * $page) \- $records_per_page"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Заголовочный файл с описанием страниц 
+
+Данный файл содержит в себе определения основных классов, используемых в программе 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for My Project from the source code\&.

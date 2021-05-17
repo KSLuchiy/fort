@@ -1,0 +1,48 @@
+.TH "search.php" 3 "Sat May 15 2021" "My Project" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+search.php \- Поиск информации об объекте  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fB$database\fP = new Database()"
+.br
+.ti -1c
+.RI "\fB$db\fP = $database\->getConnection()"
+.br
+.ti -1c
+.RI "\fB$product\fP = new Product($db)"
+.br
+.ti -1c
+.RI "\fB$category\fP = new Category($db)"
+.br
+.ti -1c
+.RI "\fB$search_term\fP =isset($_GET['s']) ? $_GET['s'] : ''"
+.br
+.ti -1c
+.RI "\fB$page_title\fP = 'Вы искали \\'{$search_term}\\''"
+.br
+.ti -1c
+.RI "\fB$stmt\fP = $product\->search($search_term, $from_record_num, $records_per_page)"
+.br
+.ti -1c
+.RI "\fB$page_url\fP ='search\&.php?s={$search_term}&'"
+.br
+.ti -1c
+.RI "\fB$total_rows\fP =$product\->countAll_BySearch($search_term)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Поиск информации об объекте 
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for My Project from the source code\&.

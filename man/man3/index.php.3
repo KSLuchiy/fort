@@ -1,0 +1,97 @@
+.TH "index.php" 3 "Sat May 15 2021" "My Project" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+index.php \- Главная страница  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fB$page\fP = isset($_GET['page']) ? $_GET['page'] : 1"
+.br
+.ti -1c
+.RI "\fB$records_per_page\fP = 10"
+.br
+.ti -1c
+.RI "\fB$from_record_num\fP = ($records_per_page * $page) \- $records_per_page"
+.br
+.ti -1c
+.RI "\fB$database\fP = new Database()"
+.br
+.ti -1c
+.RI "\fB$db\fP = $database\->getConnection()"
+.br
+.ti -1c
+.RI "\fB$product\fP = new Product($db)"
+.br
+.ti -1c
+.RI "\fB$category\fP = new Category($db)"
+.br
+.ti -1c
+.RI "\fB$stmt\fP = $product\->readAll($from_record_num, $records_per_page)"
+.br
+.ti -1c
+.RI "\fB$num\fP = $stmt\->rowCount()"
+.br
+.ti -1c
+.RI "\fB$page_title\fP = 'Общая информация '"
+.br
+.ti -1c
+.RI "\fBif\fP($num >0) \fBelse\fP"
+.br
+.ti -1c
+.RI "\fB$page_url\fP = 'index\&.php?'"
+.br
+.ti -1c
+.RI "\fB$total_rows\fP = $product\->countAll()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Главная страница 
+
+
+.SH "Variable Documentation"
+.PP 
+.SS "$database = new Database()"
+инициализация объекта базы данных 
+.SS "$page = isset($_GET['page']) ? $_GET['page'] : 1"
+
+.PP
+\fBAuthor\fP
+.RS 4
+Семен 
+.RE
+.PP
+\fBVersion\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+Май 2021 года 
+.RE
+.PP
+\fBWarning\fP
+.RS 4
+Данный проект создан в учебных целях 
+.RE
+.PP
+
+.SS "$product = new Product($db)"
+инициализация объектов сущности товара и категории 
+.SS "\fBif\fP ( $num >0) else"
+\fBInitial value:\fP
+.PP
+.nf
+{
+    echo "<div class='alert alert-info'>Записей не найдено\&.</div>"
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for My Project from the source code\&.
